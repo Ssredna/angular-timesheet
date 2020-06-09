@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "timesheet-widget"
+    }
+  },
+  "defaultProject": "timesheet-widget",
+  "cli": {
+    "analytics": false
+  }
 }
