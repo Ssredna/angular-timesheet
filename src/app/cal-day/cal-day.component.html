@@ -1,3 +1,15 @@
-<div class="component">
-  <p>cal-day works!</p>
+<div
+  class="cal_day_wrapper component"
+  [class.currentDay]="currentDay"
+  [class.selectedDay]="selectedDay"
+>
+  <p class="weekday">{{ day | date: "EEE" }}</p>
+
+  <div class="date_wrapper">
+    <p class="date">{{ day | date: "d" }}</p>
+  </div>
+
+  <p class="hours">{{ hoursString }}</p>
+
+  <p>.</p>
 </div>

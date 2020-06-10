@@ -1,0 +1,18 @@
+.cal_day_wrapper {
+  display: inline-block;
+  margin: 10px;
+}
+
+p {
+  text-align: center;
+}
+
+.currentDay {
+  border: solid orange;
+}
+
+.selectedDay {
+  background-color: orange;
+  color: white;
+  border: solid black;
+}

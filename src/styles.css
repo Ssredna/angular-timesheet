@@ -3,3 +3,8 @@
   border-style: solid;
   margin: 10px;
 }
+
+p,
+h2 {
+  font-family: Roboto;
+}

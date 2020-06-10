@@ -1,4 +1,11 @@
 <div class="component">
-  <p>calendar component</p>
-  <app-cal-day></app-cal-day>
+  <h2>{{ currentDay | date: "LLLL y" }}</h2>
+
+  <app-cal-day
+    *ngFor="let day of lastWeekDays"
+    [day]="day"
+    [currentDay]="isItCurrentDay(day)"
+    [selectedDay]="isItSelected(day)"
+    (click)="selectDay(day)"
+  ></app-cal-day>
 </div>
