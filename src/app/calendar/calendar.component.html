@@ -1,6 +1,5 @@
 <div class="component">
   <h2>{{ currentDay | date: "LLLL y" }}</h2>
-
   <app-cal-day
     *ngFor="let day of lastWeekDays"
     [day]="day"

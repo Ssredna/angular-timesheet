@@ -1,3 +1,49 @@
 <div class="component">
-  <p>timesheet works!</p>
+  <div *ngIf="hoursEvents.length">
+    <p>Hours</p>
+    <p>
+      {{ firstTaskStart | date: "HH:mm" }} -
+      {{ lastTaskEnd | date: "HH:mm" }}
+    </p>
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Duration</th>
+      </tr>
+      <tr *ngFor="let event of hoursEvents">
+        <td>{{ event.eventTypeName }}</td>
+        <td>{{ event.quantity | numberToTime }}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div *ngIf="expenseEvents.length">
+    <p>Expenses</p>
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Quantity</th>
+        <th>Total</th>
+      </tr>
+      <tr *ngFor="let event of expenseEvents">
+        <td>{{ event.eventTypeName }}</td>
+        <td>{{ event.quantity }}</td>
+        <td>{{ event.price * event.quantity }}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div *ngIf="additionalHoursEvents.length">
+    <p>Additional hours</p>
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Amount</th>
+      </tr>
+      <tr *ngFor="let event of additionalHoursEvents">
+        <td>{{ event.eventTypeName }}</td>
+        <td>{{ event.quantity }}</td>
+      </tr>
+    </table>
+  </div>
 </div>

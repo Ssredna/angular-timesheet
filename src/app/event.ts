@@ -1,4 +1,4 @@
-export interface Event {
+export interface EventData {
   date: Date;
   quantity: number;
   price: number;

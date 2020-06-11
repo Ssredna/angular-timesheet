@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CalendarService } from '../calendar.service';
 
 @Component({
   selector: 'app-calendar',
@@ -10,12 +11,14 @@ export class CalendarComponent implements OnInit {
   currentDay: Date;
   selectedDay: Date;
 
-  constructor() {}
+  constructor(private calendarService: CalendarService) {}
 
   ngOnInit(): void {
     this.getWeekDays();
     this.currentDay = this.lastWeekDays[6];
-    this.selectedDay = this.currentDay;
+    this.calendarService.currentSelectedDate.subscribe(
+      (day) => (this.selectedDay = day)
+    );
   }
 
   getWeekDays() {
@@ -27,7 +30,7 @@ export class CalendarComponent implements OnInit {
   }
 
   selectDay(day: Date) {
-    this.selectedDay = day;
+    this.calendarService.selectDay(day);
   }
 
   isItCurrentDay(day: Date): boolean {
