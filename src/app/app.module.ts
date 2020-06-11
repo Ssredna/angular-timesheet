@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { MatIconModule } from '@angular/material/icon';
+
 import { AppComponent } from './app.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { TimesheetComponent } from './timesheet/timesheet.component';
@@ -24,7 +26,7 @@ import { NewTaskComponent } from './new-task/new-task.component';
     NumberToTimePipe,
     NewTaskComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, MatIconModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,34 +1,73 @@
 .cal_day_wrapper {
   display: inline-block;
-  margin: 10px;
+  padding: 8px;
 }
 
 p {
   text-align: center;
+  margin: 0;
+}
+
+.weekday {
+  font-size: 12px;
+}
+
+.date {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.hours {
+  font-size: 12px;
+}
+
+.date_wrapper {
+  padding: 8px;
+  border-radius: 3px;
+  min-width: 19px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 .currentDay {
-  border: solid orange;
+  border: 1px solid #f08900;
+  padding: 7px;
+}
+
+.noTask {
+  color: #a1a1a1;
 }
 
 .selectedDay {
-  background-color: orange;
+  background-color: #f08900;
   color: white;
-  border: solid black;
+}
+
+.dot_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 7px;
+}
+
+.dot {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 .redDot {
-  color: red;
+  background-color: red;
 }
 
 .greenDot {
-  color: green;
+  background-color: rgb(117, 224, 117);
 }
 
 .greyDot {
-  color: grey;
+  background-color: #a1a1a1;
 }
 
 .noDot {
-  color: yellow;
+  background-color: transparent;
 }

@@ -1,22 +1,29 @@
-<div
-  class="cal_day_wrapper component"
-  [class.currentDay]="currentDay"
-  [class.selectedDay]="selectedDay"
->
-  <p class="weekday">{{ day | date: "EEE" }}</p>
+<div class="cal_day_wrapper">
+  <p class="weekday" [class.noTask]="dotColor === 'noDot'">
+    {{ day | date: "EEE" }}
+  </p>
 
-  <div class="date_wrapper">
-    <p class="date">{{ day | date: "d" }}</p>
+  <div
+    class="date_wrapper"
+    [class.noTask]="dotColor === 'noDot'"
+    [class.currentDay]="currentDay"
+    [class.selectedDay]="selectedDay"
+  >
+    <p class="date">
+      {{ day | date: "d" }}
+    </p>
   </div>
 
   <p class="hours">{{ hoursString }}</p>
 
-  <p
-    [class.redDot]="dotColor === 'red'"
-    [class.greenDot]="dotColor === 'green'"
-    [class.greyDot]="dotColor === 'grey'"
-    [class.noDot]="dotColor === 'noDot'"
-  >
-    .
-  </p>
+  <div class="dot_container">
+    <span
+      class="dot"
+      [class.redDot]="dotColor === 'red'"
+      [class.greenDot]="dotColor === 'green'"
+      [class.greyDot]="dotColor === 'grey'"
+      [class.noDot]="dotColor === 'noDot'"
+    >
+    </span>
+  </div>
 </div>

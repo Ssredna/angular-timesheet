@@ -1,10 +1,21 @@
-<div class="component">
-  <h2>{{ currentDay | date: "LLLL y" }}</h2>
-  <app-cal-day
-    *ngFor="let day of lastWeekDays"
-    [day]="day"
-    [currentDay]="isItCurrentDay(day)"
-    [selectedDay]="isItSelected(day)"
-    (click)="selectDay(day)"
-  ></app-cal-day>
+<div class="container">
+  <div class="calendar_wrapper">
+    <div class="top_bar">
+      <p>{{ currentDay | date: "LLLL y" }}</p>
+
+      <button class="today_button" (click)="selectDay(currentDay)">
+        <mat-icon>event</mat-icon>
+      </button>
+    </div>
+
+    <div class="days_wrapper">
+      <app-cal-day
+        *ngFor="let day of lastWeekDays"
+        [day]="day"
+        [currentDay]="isItCurrentDay(day)"
+        [selectedDay]="isItSelected(day)"
+        (click)="selectDay(day)"
+      ></app-cal-day>
+    </div>
+  </div>
 </div>

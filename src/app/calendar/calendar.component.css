@@ -1,0 +1,30 @@
+.container {
+  border-bottom: 1px solid #f3f3f3;
+  padding: 15px;
+}
+
+.top_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.today_button {
+  left: 100%;
+  background-color: transparent;
+  border: 0px transparent;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.days_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
