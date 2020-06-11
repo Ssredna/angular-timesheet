@@ -36,6 +36,28 @@ export class CalendarService {
     return hours;
   }
 
+  getDotColor(day: Date): string {
+    let eventList: EventData[] = [];
+    for (const event of MOCK_DATA) {
+      if (event.date.toDateString() === day.toDateString()) {
+        if (event.isRejected) {
+          return 'red';
+        }
+        eventList.push(event);
+      }
+    }
+    if (eventList.length) {
+      for (const event of eventList) {
+        if (!event.isApproved) {
+          return 'grey';
+        }
+      }
+    } else {
+      return 'noDot';
+    }
+    return 'green';
+  }
+
   selectDay(day: Date): void {
     this.selectedDate.next(day);
     this.getHoursEvents(day);

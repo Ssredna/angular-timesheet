@@ -10,6 +10,7 @@ import { WidgetMiddleComponent } from './widget-middle/widget-middle.component';
 import { CalDayComponent } from './cal-day/cal-day.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NumberToTimePipe } from './number-to-time.pipe';
+import { NewTaskComponent } from './new-task/new-task.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { NumberToTimePipe } from './number-to-time.pipe';
     WidgetMiddleComponent,
     CalDayComponent,
     NumberToTimePipe,
+    NewTaskComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

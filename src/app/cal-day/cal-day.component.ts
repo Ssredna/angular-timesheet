@@ -12,11 +12,14 @@ export class CalDayComponent implements OnInit {
   @Input() currentDay: boolean;
   hours: number = 0;
   hoursString: string;
+  dotColor: string;
 
   constructor(private calendarService: CalendarService) {}
 
   ngOnInit(): void {
     this.getHours();
+    this.getDot();
+    console.log(this.dotColor);
   }
 
   getHours(): void {
@@ -26,6 +29,10 @@ export class CalDayComponent implements OnInit {
     } else {
       this.hoursString = '-';
     }
+  }
+
+  getDot(): void {
+    this.dotColor = this.calendarService.getDotColor(this.day);
   }
 
   setTohhmm(hours: number): string {

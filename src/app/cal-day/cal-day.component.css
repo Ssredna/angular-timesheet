@@ -16,3 +16,19 @@ p {
   color: white;
   border: solid black;
 }
+
+.redDot {
+  color: red;
+}
+
+.greenDot {
+  color: green;
+}
+
+.greyDot {
+  color: grey;
+}
+
+.noDot {
+  color: yellow;
+}

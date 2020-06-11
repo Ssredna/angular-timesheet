@@ -101,7 +101,7 @@ export const MOCK_DATA: EventData[] = [
     isAdditionalHoursEventType: false,
     isWorkHour: true,
     isApproved: false,
-    isRejected: false,
+    isRejected: true,
     tasksCount: 2,
     firstTaskStart: new Date(2020, 5, 9),
     lastTaskEnd: new Date(2020, 5, 9),

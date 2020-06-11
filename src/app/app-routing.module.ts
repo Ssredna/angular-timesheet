@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TimesheetComponent } from './timesheet/timesheet.component';
+import { TimesheetWidgetComponent } from './timesheet-widget/timesheet-widget.component';
+import { NewTaskComponent } from './new-task/new-task.component';
 
-const routes: Routes = [{ path: 'date/:date', component: TimesheetComponent }];
+const routes: Routes = [
+  { path: '', component: TimesheetWidgetComponent },
+  { path: 'new_task', component: NewTaskComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

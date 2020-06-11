@@ -11,5 +11,12 @@
 
   <p class="hours">{{ hoursString }}</p>
 
-  <p>.</p>
+  <p
+    [class.redDot]="dotColor === 'red'"
+    [class.greenDot]="dotColor === 'green'"
+    [class.greyDot]="dotColor === 'grey'"
+    [class.noDot]="dotColor === 'noDot'"
+  >
+    .
+  </p>
 </div>
