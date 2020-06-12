@@ -1,3 +1,8 @@
+.timesheet_container {
+  height: 400px;
+  overflow-y: auto;
+}
+
 table {
   font-family: roboto;
   width: 100%;
