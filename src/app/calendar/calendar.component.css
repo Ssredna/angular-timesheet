@@ -16,12 +16,7 @@ p {
 }
 
 .today_button {
-  left: 100%;
   background-color: transparent;
-  border: 0px transparent;
-  padding: 6px;
-  display: flex;
-  align-items: center;
 }
 
 .days_wrapper {

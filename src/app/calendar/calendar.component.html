@@ -3,7 +3,11 @@
     <div class="top_bar">
       <p>{{ currentDay | date: "LLLL y" }}</p>
 
-      <button class="today_button" (click)="selectDay(currentDay)">
+      <button
+        mat-icon-button
+        class="today_button"
+        (click)="selectDay(currentDay)"
+      >
         <mat-icon>event</mat-icon>
       </button>
     </div>

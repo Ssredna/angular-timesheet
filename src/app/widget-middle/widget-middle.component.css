@@ -1,0 +1,10 @@
+.container {
+  padding: 15px;
+  padding-bottom: 0px;
+}
+
+.selected_day {
+  font-size: 14px;
+  margin: 0px;
+  margin-bottom: 15px;
+}
